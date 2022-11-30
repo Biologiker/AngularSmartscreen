@@ -1,0 +1,166 @@
+:root {
+  --weatherBoxHeight: 400px;
+  --weatherBoxWidth: calc(var(--weatherBoxHeight) *1.5);
+  --defaultBorderRadius: calc(var(--weatherBoxWidth) * 0.0386996904024768);
+
+  --boxMargin: 10px;
+  --transitionTime: 0.3s;
+
+  --clockBoxWidth: calc(var(--weatherBoxWidth) * 0.4 - var(--boxMargin) * 1.5);
+  --internWeatherBoxWidth: calc(var(--weatherBoxWidth) * 0.6 - var(--boxMargin) * 1.5);
+}
+
+@media only screen and (max-width: 600px),
+only screen and (max-height: 400px) {
+  :root {
+    --weatherBoxHeight: 200px;
+    --weatherBoxWidth: calc(var(--weatherBoxHeight) *1.5);
+    --boxMargin: 5px;
+  }
+
+  /*todo: entfernen lol*/
+  body {
+    background-color: black !important;
+  }
+}
+
+.weatherBox {
+  height: var(--weatherBoxHeight);
+  width: var(--weatherBoxWidth);
+  background: linear-gradient(90deg, var(--GradientColor1) 0%, var(--GradientColor2) 100%);
+  border-radius: var(--defaultBorderRadius);
+  transition: var(--transitionTime) ease-in-out;
+}
+
+.clockBox {
+  height: calc(100% - var(--boxMargin) * 2);
+  width: var(--clockBoxWidth);
+  margin-top: var(--boxMargin);
+  margin-left: var(--boxMargin);
+  float: left;
+  border-radius: var(--defaultBorderRadius);
+  background: linear-gradient(0deg, var(--DarkColor1) -100%, var(--AccentDark) 100%);
+  transition: var(--transitionTime) ease-in-out;
+}
+
+/*
+.clockBox:hover {
+  height: var(--weatherBoxHeight);
+  width: calc(var(--weatherBoxWidth) * 0.4);
+  margin: 0px;
+  margin-right: calc(var(--boxMargin) / -2);
+}
+*/
+.timeBox {
+  background-color: var(--DarkColor1);
+  margin: calc(var(--boxMargin)* 2);
+  height: calc(var(--weatherBoxHeight) * 0.1425);
+  width: calc(var(--weatherBoxHeight) * 0.45);
+  display: flex;
+  justify-content: center;
+  border-radius: var(--defaultBorderRadius);
+  float: left;
+  transition: var(--transitionTime) ease-in-out;
+}
+
+.timeNumbers,
+.tick {
+  float: left;
+  font-size: calc(var(--weatherBoxWidth) * 0.055);
+}
+
+.seconds,
+.minutes,
+.hours {
+  height: calc(var(--weatherBoxWidth) * 0.06333);
+  margin-top: var(--boxMargin);
+  overflow: hidden;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.leftUp {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.rightUp {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.leftDown {
+  grid-row: 2;
+  grid-column: 1;
+  margin-top: calc(var(--boxMargin) * -1.2);
+}
+
+.rightDown {
+  grid-row: 2;
+  grid-column: 2;
+  margin-top: calc(var(--boxMargin) * -1.2);
+  ;
+}
+
+.tick {
+  height: min-content;
+  margin-top: var(--boxMargin);
+  overflow: hidden;
+  display: grid;
+}
+
+.move {
+  animation: move linear 500ms;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+
+  to {
+    transform: translateY(-73%);
+  }
+}
+
+.dayBox {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: var(--DarkColor1);
+  width: calc(var(--weatherBoxWidth) * 0.15);
+  height: calc(var(--weatherBoxWidth) * 0.15);
+  margin-top: calc(var(--boxMargin)* 2);
+  margin-left: calc(var(--boxMargin)* 2);
+  border-radius: var(--defaultBorderRadius);
+  overflow: auto;
+}
+
+.innerDayBox {
+  text-align: center;
+  font-size: calc(var(--weatherBoxWidth) * 0.05);
+  font-weight: bold;
+}
+
+.internWeatherBox {
+  height: calc(100% - var(--boxMargin) * 2);
+  width: var(--internWeatherBoxWidth);
+  margin-top: var(--boxMargin);
+  margin-left: var(--boxMargin);
+  float: left;
+  border-radius: var(--defaultBorderRadius);
+  background: linear-gradient(0deg, var(--AccentDark) -50%, var(--GradientColor1) 100%);
+  transition: var(--transitionTime) ease-in-out;
+}
+
+/*
+.internWeatherBox:hover {
+  height: var(--weatherBoxHeight);
+  width: calc(var(--weatherBoxWidth) * 0.6);
+  margin: 0px;
+  margin-left: calc(var(--boxMargin)/2);
+}
+*/

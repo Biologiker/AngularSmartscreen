@@ -1,0 +1,70 @@
+:root {}
+
+@media only screen and (max-width: 600px),
+only screen and (max-height: 400px) {
+  :root {}
+}
+
+.weatherImageBox {
+  height: calc(var(--weatherBoxHeight) * 0.285);
+  width: calc(100% - var(--boxMargin) * 2);
+  margin: var(--boxMargin);
+  margin-bottom: 0;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: var(--defaultBorderRadius);
+}
+
+.weatherImage {
+  width: 100%;
+}
+
+.weatherForeCastBox {
+  height: calc(var(--weatherBoxHeight) * 0.285);
+  width: calc(100% - var(--boxMargin) * 2);
+  background-color: var(--DarkColor1);
+  border-radius: var(--defaultBorderRadius);
+  margin: var(--boxMargin);
+}
+
+.weekDayForecast {
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+
+.currentWeatherBox {
+  height: calc(var(--weatherBoxHeight) * 0.285);
+  width: calc(100% - var(--boxMargin) * 2);
+  background-color: var(--DarkColor1);
+  border-radius: var(--defaultBorderRadius);
+  margin: var(--boxMargin);
+}
+
+.dateBox {
+  background-color: #fff;
+  height: 30%;
+  width: 100%;
+}
+
+.innerCurrentWeatherBox {
+  float: left;
+  background-color: blue;
+  height: 50%;
+  width: 10%;
+  border-width: 2px;
+  border-color: red;
+  border-style: solid;
+}
+
+.forecastBox {
+  float: left;
+  background-color: black;
+  height: 50%;
+  width: 10%;
+  border-width: 2px;
+  border-color: red;
+  border-style: solid;
+}

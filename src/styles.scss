@@ -1,1 +1,27 @@
+@import url(./app/weather-widget/timeBox.weather-widget.component.scss);
+@import url(./app/weather-widget/weatherBox.weather-widget.component.scss);
+
+:root {
+  --backgroundColor: #004643;
+  --defaultFontColor: #FFFFFF;
+
+  --AccentBright: #7BF1A8;
+  --AccentDark: #1F715D;
+  --GradientColor1: #3E9C76;
+  --GradientColor2: #C1FBA4;
+
+  --DarkColor1: #222831;
+  --DarkColor2: #1e232b;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--defaultFontColor);
+}
+
+.transitionAll {
+  transition: var(--transitionTime) ease-in-out;
+}
+
 /* You can add global styles to this file, and also import other style files */
