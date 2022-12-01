@@ -24,4 +24,10 @@ body {
   transition: var(--transitionTime) ease-in-out;
 }
 
+.centerContent {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
 /* You can add global styles to this file, and also import other style files */

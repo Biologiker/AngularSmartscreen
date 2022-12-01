@@ -6,14 +6,11 @@ only screen and (max-height: 400px) {
 }
 
 .weatherImageBox {
-  height: calc(var(--weatherBoxHeight) * 0.285);
+  height: calc(var(--weatherBoxHeight) * 0.15);
   width: calc(100% - var(--boxMargin) * 2);
   margin: var(--boxMargin);
   margin-bottom: 0;
   overflow: hidden;
-  justify-content: center;
-  display: flex;
-  align-items: center;
   border-radius: var(--defaultBorderRadius);
 }
 
@@ -36,7 +33,7 @@ only screen and (max-height: 400px) {
 }
 
 .currentWeatherBox {
-  height: calc(var(--weatherBoxHeight) * 0.285);
+  height: calc(var(--weatherBoxHeight) * 0.415);
   width: calc(100% - var(--boxMargin) * 2);
   background-color: var(--DarkColor1);
   border-radius: var(--defaultBorderRadius);
@@ -44,27 +41,97 @@ only screen and (max-height: 400px) {
 }
 
 .dateBox {
-  background-color: #fff;
-  height: 30%;
-  width: 100%;
+  height: 20%;
+  width: calc(100% - var(--weatherBoxWidth) * 0.005 * 2);
+  font-size: calc(var(--weatherBoxWidth) * 0.035);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  border-top-right-radius: var(--defaultBorderRadius);
+  border-top-left-radius: var(--defaultBorderRadius);
 }
 
 .innerCurrentWeatherBox {
+  display: grid;
   float: left;
-  background-color: blue;
-  height: 50%;
-  width: 10%;
-  border-width: 2px;
-  border-color: red;
+  height: calc(80% - var(--weatherBoxWidth) * 0.005 * 2 * 2);
+  width: calc(25% - var(--weatherBoxWidth) * 0.005 * 2);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
   border-style: solid;
+  border-bottom-left-radius: var(--defaultBorderRadius);
+  font-size: calc(var(--weatherBoxWidth) * 0.03);
+}
+
+#forecastBox5 {
+  border-bottom-right-radius: var(--defaultBorderRadius);
 }
 
 .forecastBox {
+  display: grid;
   float: left;
-  background-color: black;
-  height: 50%;
-  width: 10%;
-  border-width: 2px;
-  border-color: red;
+  height: calc(80% - var(--weatherBoxWidth) * 0.005 * 2 * 2);
+  width: calc(15% - var(--weatherBoxWidth) * 0.005 * 2);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
   border-style: solid;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+}
+
+.smallWeatherImageBox {
+  grid-row: 1;
+  width: calc(var(--weatherBoxWidth) * 0.07);
+  height: calc(var(--weatherBoxWidth) * 0.07);
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.weatherTimeBox {
+  grid-row: 2;
+  width: 100%;
+  font-weight: bold;
+}
+
+.degreesBox {
+  grid-row: 3;
+  width: 100%;
+}
+
+.smallWeatherImage {
+  max-height: 100%;
+}
+
+.dayForecastBox {
+  display: grid;
+  float: left;
+  height: calc(80% - var(--weatherBoxWidth) * 0.005 * 2 * 2);
+  width: calc(20% - var(--weatherBoxWidth) * 0.005 * 2);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+}
+
+#dayForecastBox1 {
+  border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+#dayForecastBox5 {
+  border-bottom-right-radius: var(--defaultBorderRadius);
+}
+
+.dayForecastTextBox {
+  height: 20%;
+  width: calc(100% - var(--weatherBoxWidth) * 0.005 * 2);
+  font-size: calc(var(--weatherBoxWidth) * 0.03);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  border-top-right-radius: var(--defaultBorderRadius);
+  border-top-left-radius: var(--defaultBorderRadius);
+}
+
+.weekDayForecast {
+  font-weight: bold;
+  grid-row: 1;
 }
