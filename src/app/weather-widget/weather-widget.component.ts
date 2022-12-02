@@ -8,6 +8,7 @@ import { TaskTimer } from 'tasktimer';
 })
 export class WeatherWidgetComponent implements OnInit {
   ngOnInit() {
+
     const shortWeekday = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
     //todo: muss noch geschleift werden
@@ -30,6 +31,10 @@ export class WeatherWidgetComponent implements OnInit {
     timer.on("tick", () => refreshWrapper(new Date()));
 
     timer.start();
+  }
+
+  localDragFunction(this: any) {
+    this.funcs.drag();
   }
 }
 

@@ -1,127 +1,123 @@
-<div class="weatherBox transitionAll" id="weatherBox">
-  <div class="clockBox transitionAll" id="test">
-    <div class="timeBox transitionAll">
-      <div class="hours transitionAll">
-        <div class="timeNumbers leftMiddle" id="hourLeft">0</div>
-        <div class="timeNumbers rightMiddle" id="hourRight">0</div>
-        <div class="timeNumbers leftDown" id="hourLeft2">0</div>
-        <div class="timeNumbers rightDown " id="hourRight2">0</div>
-      </div>
-      <div class="tick transitionAll">:</div>
-      <div class="minutes transitionAll">
-        <div class="timeNumbers leftMiddle" id="minuteLeft">0</div>
-        <div class="timeNumbers rightMiddle" id="minuteRight">0</div>
-        <div class="timeNumbers leftDown" id="minuteLeft2">0</div>
-        <div class="timeNumbers rightDown" id="minuteRight2">0</div>
-      </div>
-      <div class="tick transitionAll">:</div>
-      <div class="seconds transitionAll">
-        <!-- todo: obere Zahlen anzeigen -->
-        <!-- <div class="timeNumbers leftUp" id="secondLeft">0</div> //NOSONAR
+<div class="bigBox">
+  <div class="weatherBox" id="weatherBox" cdkDragBoundary=".bigBox" cdkDrag>
+    <div class="clockBox" id="test">
+      <div class="timeBox">
+        <div class="hours">
+          <div class="timeNumbers leftMiddle" id="hourLeft">0</div>
+          <div class="timeNumbers rightMiddle" id="hourRight">0</div>
+          <div class="timeNumbers leftDown" id="hourLeft2">0</div>
+          <div class="timeNumbers rightDown " id="hourRight2">0</div>
+        </div>
+        <div class="tick">:</div>
+        <div class="minutes">
+          <div class="timeNumbers leftMiddle" id="minuteLeft">0</div>
+          <div class="timeNumbers rightMiddle" id="minuteRight">0</div>
+          <div class="timeNumbers leftDown" id="minuteLeft2">0</div>
+          <div class="timeNumbers rightDown" id="minuteRight2">0</div>
+        </div>
+        <div class="tick">:</div>
+        <div class="seconds">
+          <!-- todo: obere Zahlen anzeigen -->
+          <!-- <div class="timeNumbers leftUp" id="secondLeft">0</div> //NOSONAR
         <div class="timeNumbers rightUp" id="secondRight">0</div> -->
-        <div class="timeNumbers leftMiddle" id="secondLeft">0</div>
-        <div class="timeNumbers rightMiddle" id="secondRight">0</div>
-        <div class="timeNumbers leftDown" id="secondLeft2">0</div>
-        <div class="timeNumbers rightDown" id="secondRight2">0</div>
-        <div class="tick transitionAll"></div>
+          <div class="timeNumbers leftMiddle" id="secondLeft">0</div>
+          <div class="timeNumbers rightMiddle" id="secondRight">0</div>
+          <div class="timeNumbers leftDown" id="secondLeft2">0</div>
+          <div class="timeNumbers rightDown" id="secondRight2">0</div>
+          <div class="tick"></div>
+        </div>
+      </div>
+      <div class="dayBox centerContent">
+        <div class="innerDayBox" id="innerDayBox">
+          Mo
+        </div>
       </div>
     </div>
-    <div class="dayBox transitionAll centerContent">
-      <div class="innerDayBox transitionAll" id="innerDayBox">
-        Mo
+    <div class="internWeatherBox">
+      <div class="weatherImageBox centerContent">
+        <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="weatherImage">
       </div>
-    </div>
-  </div>
-  <div class="internWeatherBox transitionAll">
-    <div class="weatherImageBox transitionAll centerContent">
-      <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="weatherImage transitionAll">
-    </div>
-    <div class="currentWeatherBox transitionAll">
-      <div class="dateBox transitionAll centerContent">01.01.1970</div>
+      <div class="currentWeatherBox">
+        <div class="dateBox centerContent">01.01.1970</div>
 
-      <div class="innerCurrentWeatherBox transitionAll centerContent" id="innerCurrentWeatherBox">
-        <div class="weatherTimeBox centerContent">12:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="innerCurrentWeatherBox centerContent" id="innerCurrentWeatherBox">
+          <div class="weatherTimeBox centerContent">12:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
 
-      <div class="forecastBox transitionAll centerContent" id="forecastBox1">
-        <div class="weatherTimeBox centerContent">13:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="forecastBox centerContent" id="forecastBox1">
+          <div class="weatherTimeBox centerContent">13:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
 
-      <div class="forecastBox transitionAll centerContent" id="forecastBox2">
-        <div class="weatherTimeBox centerContent">14:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="forecastBox centerContent" id="forecastBox2">
+          <div class="weatherTimeBox centerContent">14:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
 
-      <div class="forecastBox transitionAll centerContent" id="forecastBox3">
-        <div class="weatherTimeBox centerContent">15:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="forecastBox centerContent" id="forecastBox3">
+          <div class="weatherTimeBox centerContent">15:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
 
-      <div class="forecastBox transitionAll centerContent" id="forecastBox4">
-        <div class="weatherTimeBox centerContent">16:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="forecastBox centerContent" id="forecastBox4">
+          <div class="weatherTimeBox centerContent">16:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
 
-      <div class="forecastBox transitionAll centerContent" id="forecastBox5">
-        <div class="weatherTimeBox centerContent">17:00</div>
-        <div class="smallWeatherImageBox centerContent">
-          <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage"
-            class="smallWeatherImage transitionAll">
+        <div class="forecastBox centerContent" id="forecastBox5">
+          <div class="weatherTimeBox centerContent">17:00</div>
+          <div class="smallWeatherImageBox centerContent">
+            <img src="../../assets/Sunny-Weather-Icon-580x386.jpg" alt="weatherImage" class="smallWeatherImage">
+          </div>
+          <div class="degreesBox centerContent">0°</div>
+          <div class="rainPossibility centerContent">0%</div>
         </div>
-        <div class="degreesBox centerContent">0°</div>
-        <div class="rainPossibility centerContent">0%</div>
-      </div>
-
-    </div>
-    <div class="weatherForeCastBox transitionAll">
-      <div class="dayForecastTextBox transitionAll centerContent">Weekly Forecast</div>
-
-      <div class="dayForecastBox transitionAll centerContent" id="dayForecastBox1">
-        <div class="weekDayForecast transitionAll" id="day1">Mo</div>
 
       </div>
-      <div class="dayForecastBox transitionAll centerContent" id="dayForecastBox2">
-        <div class="weekDayForecast transitionAll" id="day2">Di</div>
+      <div class="weatherForeCastBox">
+        <div class="dayForecastTextBox centerContent">Weekly Forecast</div>
 
-      </div>
-      <div class="dayForecastBox transitionAll centerContent" id="dayForecastBox3">
-        <div class="weekDayForecast transitionAll" id="day3">Mi</div>
+        <div class="dayForecastBox centerContent" id="dayForecastBox1">
+          <div class="weekDayForecast" id="day1">Mo</div>
 
-      </div>
-      <div class="dayForecastBox transitionAll centerContent" id="dayForecastBox4">
-        <div class="weekDayForecast transitionAll" id="day4">Do</div>
+        </div>
+        <div class="dayForecastBox centerContent" id="dayForecastBox2">
+          <div class="weekDayForecast" id="day2">Di</div>
 
-      </div>
-      <div class="dayForecastBox transitionAll centerContent" id="dayForecastBox5">
-        <div class="weekDayForecast transitionAll" id="day5">Fr</div>
+        </div>
+        <div class="dayForecastBox centerContent" id="dayForecastBox3">
+          <div class="weekDayForecast" id="day3">Mi</div>
 
+        </div>
+        <div class="dayForecastBox centerContent" id="dayForecastBox4">
+          <div class="weekDayForecast" id="day4">Do</div>
+
+        </div>
+        <div class="dayForecastBox centerContent" id="dayForecastBox5">
+          <div class="weekDayForecast" id="day5">Fr</div>
+
+        </div>
       </div>
     </div>
   </div>

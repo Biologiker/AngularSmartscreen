@@ -1,10 +1,3 @@
-:root {}
-
-@media only screen and (max-width: 600px),
-only screen and (max-height: 400px) {
-  :root {}
-}
-
 .weatherImageBox {
   height: calc(var(--weatherBoxHeight) * 0.15);
   width: calc(100% - var(--boxMargin) * 2);
@@ -12,6 +5,11 @@ only screen and (max-height: 400px) {
   margin-bottom: 0;
   overflow: hidden;
   border-radius: var(--defaultBorderRadius);
+}
+
+.bigBox {
+  height: 100%;
+  width: 100%;
 }
 
 .weatherImage {
@@ -95,6 +93,15 @@ only screen and (max-height: 400px) {
 .degreesBox {
   grid-row: 3;
   width: 100%;
+  width: 100%;
+  opacity: 0.75;
+}
+
+.rainPossibility {
+  grid-row: 4;
+  width: 100%;
+  width: 100%;
+  opacity: 0.75;
 }
 
 .smallWeatherImage {
