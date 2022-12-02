@@ -1,5 +1,6 @@
 <div class="bigBox">
-  <div class="weatherBox" id="weatherBox" cdkDragBoundary=".bigBox" cdkDrag>
+  <div class="weatherBox" id="weatherBox" cdkDragBoundary=".bigBox" cdkDrag
+    (cdkDragEnded)="this.funcs.inputPostionOfElement('weatherBox')">
     <div class="clockBox" id="test">
       <div class="timeBox">
         <div class="hours">

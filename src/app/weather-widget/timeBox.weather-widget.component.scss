@@ -30,6 +30,7 @@ only screen and (max-height: 400px) {
   background: linear-gradient(90deg, var(--GradientColor1) 0%, var(--GradientColor2) 100%);
   border-radius: var(--defaultBorderRadius);
   cursor: move;
+  margin-left: 100px;
 }
 
 .clockBox {

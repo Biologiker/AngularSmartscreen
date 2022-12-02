@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CdkDragRelease } from '@angular/cdk/drag-drop';
 import { TaskTimer } from 'tasktimer';
+
+import { SetPostionOfElementService } from "../set-postion-of-element.service";
 
 @Component({
   selector: 'app-weather-widget',
@@ -7,8 +10,12 @@ import { TaskTimer } from 'tasktimer';
   styleUrls: ['./weatherBox.weather-widget.component.scss', './timeBox.weather-widget.component.scss']
 })
 export class WeatherWidgetComponent implements OnInit {
-  ngOnInit() {
+  constructor(
+    public funcs: SetPostionOfElementService
+  ) {
+  }
 
+  ngOnInit() {
     const shortWeekday = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
     //todo: muss noch geschleift werden
@@ -31,10 +38,6 @@ export class WeatherWidgetComponent implements OnInit {
     timer.on("tick", () => refreshWrapper(new Date()));
 
     timer.start();
-  }
-
-  localDragFunction(this: any) {
-    this.funcs.drag();
   }
 }
 
