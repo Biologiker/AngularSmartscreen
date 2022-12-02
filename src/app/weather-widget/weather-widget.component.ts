@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CdkDragRelease } from '@angular/cdk/drag-drop';
 import { TaskTimer } from 'tasktimer';
 
 import { SetPostionOfElementService } from "../set-postion-of-element.service";
@@ -16,6 +15,8 @@ export class WeatherWidgetComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.funcs.setPostionOfElement()
+
     const shortWeekday = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
     //todo: muss noch geschleift werden
